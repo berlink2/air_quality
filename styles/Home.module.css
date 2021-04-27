@@ -37,6 +37,13 @@
   flex: 1;
 }
 
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .article > p {
   margin-top: 1rem;
 }
@@ -65,4 +72,34 @@
 
 .p1 {
   font-weight: 650;
+}
+
+.dropdownWrapper {
+  margin: 4rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.dropdownWrapper > span {
+  margin-right: 1rem;
+}
+
+.cityData {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cityData > p {
+  margin-bottom: 1rem;
+}
+
+.ciggs {
+  max-width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5rem;
 }
