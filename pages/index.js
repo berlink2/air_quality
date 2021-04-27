@@ -70,7 +70,16 @@ export default function Home(props) {
 
       <div className={styles.container}>
         <header className={styles.header}>
-          <div className={styles.logo}>BBC</div>
+          <div className={styles.logo}>
+            <a
+              target='_blank'
+              rel='noreferrer'
+              href={data['article-info_1_category_url']}
+            >
+              BBC
+            </a>
+          </div>
+
           <div className={styles.language}>
             <button
               onClick={() => {
@@ -112,8 +121,8 @@ export default function Home(props) {
               <div className={styles.heroImage}>
                 <Image
                   src={data.hero_1_image}
-                  height={250}
-                  width={500}
+                  height={500}
+                  width={1000}
                   objectFit='intrinsic'
                   layout='responsive'
                   loading='eager'
