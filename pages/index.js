@@ -121,8 +121,8 @@ export default function Home(props) {
               <div className={styles.heroImage}>
                 <Image
                   src={data.hero_1_image}
-                  height={500}
-                  width={1000}
+                  height={675}
+                  width={1261}
                   objectFit='intrinsic'
                   layout='responsive'
                   loading='eager'
@@ -174,6 +174,8 @@ export default function Home(props) {
                 {Array.from({ length: ciggNum }).map((_, index) => {
                   return (
                     <Image
+                      key={index}
+                      alt='Ciggrette'
                       src='/img/ciggrette_icon.png'
                       width={15}
                       height={50}
