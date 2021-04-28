@@ -1,14 +1,11 @@
-import 'jest-axe/extend-expect';
 import React from 'react';
+import 'jest-axe/extend-expect';
 import { waitFor, render, screen } from '@testing-library/react';
 import { axe } from 'jest-axe';
 import Index from './index';
 import path from 'path';
 import { promises as fs } from 'fs';
 import user from '@testing-library/user-event';
-
-// const parsedEnglishData = JSON.parse(englishData);
-// const parsedHindiData = JSON.parse(hindiData);
 
 const getData = async () => {
   const dataDirectory = path.join(process.cwd(), 'public/data');
