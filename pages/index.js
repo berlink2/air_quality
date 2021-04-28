@@ -153,8 +153,10 @@ export default function Home(props) {
               <div className={styles.heroImageWrapper}>
                 <img
                   src={data.hero_1_image}
+                  width={1261}
+                  height={475}
                   style={{
-                    width: '100%',
+                    maxWidth: '100%',
                     height: 'auto',
                   }}
                   loading='eager'
@@ -211,7 +213,7 @@ export default function Home(props) {
                       alt='Ciggrette'
                       src='/img/ciggrette_icon.png'
                       width={15}
-                      height={50}
+                      height={53.57}
                     />
                   );
                 })}
