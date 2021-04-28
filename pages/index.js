@@ -103,35 +103,35 @@ export default function Home(props) {
             </a>
           </div>
 
-          <div className={styles.language}>
-            <button
-              onClick={() => {
-                setLanguage('english');
-              }}
-            >
-              <Image
-                width={25}
-                height={25}
-                alt='UK Flag'
-                src='/img/uk-flag.png'
-              />
-            </button>
-          </div>
+          <button
+            className={styles.flagButton}
+            onClick={() => {
+              setLanguage('english');
+            }}
+          >
+            <Image
+              width={35}
+              height={35}
+              alt='UK Flag'
+              src='/img/uk-flag.png'
+            />
+          </button>
+
           <div className={styles.spacerSmall} />
-          <div>
-            <button
-              onClick={() => {
-                setLanguage('hindi');
-              }}
-            >
-              <Image
-                width={25}
-                height={25}
-                alt='India Flag'
-                src='/img/india-flag.png'
-              />
-            </button>
-          </div>
+
+          <button
+            className={styles.flagButton}
+            onClick={() => {
+              setLanguage('hindi');
+            }}
+          >
+            <Image
+              width={35}
+              height={35}
+              alt='India Flag'
+              src='/img/india-flag.png'
+            />
+          </button>
         </header>
         <main className={styles.main}>
           <div className={styles.content}>
