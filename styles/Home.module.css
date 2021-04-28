@@ -104,3 +104,10 @@
   justify-content: center;
   margin-bottom: 5rem;
 }
+
+@media screen and (max-width: 480px) {
+  .header,
+  .main {
+    padding: 2.5rem 0.75rem;
+  }
+}

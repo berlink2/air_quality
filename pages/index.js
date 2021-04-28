@@ -118,17 +118,15 @@ export default function Home(props) {
                   {data['article-info_1_date']}
                 </span>
               </div>
-              <div className={styles.heroImage}>
-                <Image
-                  src={data.hero_1_image}
-                  height={675}
-                  width={1261}
-                  objectFit='intrinsic'
-                  layout='responsive'
-                  loading='eager'
-                  alt='Two Indians on a motorcycle breathe in the Smog'
-                />
-              </div>
+
+              <Image
+                src={data.hero_1_image}
+                height={675}
+                width={1261}
+                loading='eager'
+                alt='Two Indians on a motorcycle breathe in the Smog'
+              />
+
               <br />
               <p className={styles.p1}>{data.p_1_value}</p>
               <p>{data.p_2_value}</p>
