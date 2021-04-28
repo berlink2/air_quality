@@ -2,7 +2,7 @@ import React from 'react';
 import 'jest-axe/extend-expect';
 import { waitFor, render, screen } from '@testing-library/react';
 import { axe } from 'jest-axe';
-import Index from './index';
+import Index from '../pages/index';
 import path from 'path';
 import { promises as fs } from 'fs';
 import user from '@testing-library/user-event';
