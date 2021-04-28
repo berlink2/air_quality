@@ -34,20 +34,7 @@ Mobile Screenshot
 
 Lighthouse Scores
 
-<img width="1438" alt="Screenshot 2021-04-28 at 19 12 08" src="https://user-images.githubusercontent.com/46464571/116402836-1271c880-a857-11eb-830e-d07b8966af20.png">
-
-Bundle sizes
-
-<img width="1439" alt="Screenshot 2021-04-28 at 19 21 23" src="https://user-images.githubusercontent.com/46464571/116402880-1e5d8a80-a857-11eb-853a-33046c462636.png">
-
-
-
-
-
-
-
-
-
+<img width="1434" alt="Screenshot 2021-04-28 at 20 31 00" src="https://user-images.githubusercontent.com/46464571/116412363-d0e61b00-a860-11eb-90bb-4e0aaf481395.png">
 
 
 
