@@ -15,6 +15,11 @@ Run Locally
 7. With prod build or development build the app will be running at http://localhost:3000
 8. Run tests with `npm test`
 
+Build app and output flat files that can be served in a CDN statically
+
+1. In the root directory (where package.json is) run `npm run export`
+2. The flat static files will be found in the folder `out`
+
 ## Results
 
 Desktop Screenshot
