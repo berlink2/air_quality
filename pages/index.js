@@ -7,12 +7,12 @@ import Image from 'next/image';
 
 // // This function gets called at build time on server-side.
 export async function getStaticProps() {
-  const postsDirectory = path.join(process.cwd(), 'public/data');
-  const filenames = await fs.readdir(postsDirectory);
+  const dataDirectory = path.join(process.cwd(), 'public/data');
+  const filenames = await fs.readdir(dataDirectory);
 
   // get json files in public/data, parse them, and add to an array
   const data = filenames.map(async (filename) => {
-    const filePath = path.join(postsDirectory, filename);
+    const filePath = path.join(dataDirectory, filename);
     const fileContents = await fs.readFile(filePath, 'utf8');
     const parsedData = JSON.parse(fileContents);
 
@@ -104,6 +104,7 @@ export default function Home(props) {
           </div>
 
           <button
+            data-testid='ukFlagButton'
             className={styles.flagButton}
             onClick={() => {
               setLanguage('english');
@@ -120,6 +121,7 @@ export default function Home(props) {
           <div className={styles.spacerSmall} />
 
           <button
+            data-testid='indiaFlagButton'
             className={styles.flagButton}
             onClick={() => {
               setLanguage('hindi');
@@ -136,7 +138,12 @@ export default function Home(props) {
         <main className={styles.main}>
           <div className={styles.content}>
             <article className={styles.article}>
-              <h1 id='main-heading' className={styles.title} tabIndex={-1}>
+              <h1
+                id='main-heading'
+                data-testid='articleTitle'
+                className={styles.title}
+                tabIndex={-1}
+              >
                 {data.hero_1_title}
               </h1>
 
@@ -168,6 +175,7 @@ export default function Home(props) {
               <div className={styles.dropdownWrapper}>
                 <span id='city-selector'>{data['compare-tabs_1_title']}:</span>
                 <select
+                  data-testid='citySelector'
                   value={selectedCityIndex}
                   onChange={(e) => {
                     setSelectedCityIndex(e.currentTarget.value);
@@ -185,14 +193,14 @@ export default function Home(props) {
               </div>
 
               <div className={styles.cityData}>
-                <p>
+                <p data-testid='aqiCity'>
                   Air Quality Index of {cityData[selectedCityIndex].cityName}
                 </p>
                 <p>
                   {' '}
                   <strong>{cityData[selectedCityIndex].aqi}</strong>
                 </p>
-                <p>
+                <p data-testid='aqiCiggs'>
                   Equivalent to smoking{' '}
                   <strong>{cityData[selectedCityIndex].cigg}</strong> cigarettes
                 </p>
