@@ -62,10 +62,33 @@ export default function Home(props) {
         <html lang={language === 'english' ? 'en' : 'hi'} />
         <title>{data.hero_1_title}</title>
         <link rel='icon' href='/favicon.ico' />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta charSet='utf-8' />
 
         <meta property='og:title' content={data.hero_1_title} key='ogtitle' />
+        <meta name='description' content={data.p_1_value} />
+        <meta property='og:title' content={data.hero_1_title} />
+        <meta property='og:description' content={data.p_1_value} />
+        <meta
+          property='og:image'
+          content='https://news.files.bbci.co.uk/vj/live/idt-images/image-slider-hello/SMOG_vdyw4.jpg'
+        />
+        <meta
+          property='og:image:alt'
+          content='Two Indians on a motorcycle breathe in the Smog'
+        />
+        <meta
+          property='og:locale'
+          content={language === 'english' ? 'en_GB' : 'hi_IN'}
+        />
+        <meta property='og:type' content='website' />
+        <meta name='twitter:card' content={data.hero_1_title} />
+        <meta
+          property='og:url'
+          content='http://www.bbc.co.uk/news/world/asia/india'
+        />
+        <link
+          rel='canonical'
+          href='http://www.bbc.co.uk/news/world/asia/india'
+        ></link>
       </Head>
 
       <div className={styles.container}>
@@ -86,7 +109,12 @@ export default function Home(props) {
                 setLanguage('english');
               }}
             >
-              <Image width={25} height={25} src='/img/uk-flag.png' />
+              <Image
+                width={25}
+                height={25}
+                alt='UK Flag'
+                src='/img/uk-flag.png'
+              />
             </button>
           </div>
           <div className={styles.spacerSmall} />
@@ -96,7 +124,12 @@ export default function Home(props) {
                 setLanguage('hindi');
               }}
             >
-              <Image width={25} height={25} src='/img/india-flag.png' />
+              <Image
+                width={25}
+                height={25}
+                alt='India Flag'
+                src='/img/india-flag.png'
+              />
             </button>
           </div>
         </header>
@@ -113,10 +146,8 @@ export default function Home(props) {
                   <strong>{data['article-info_1_byline']}</strong>
                 </span>
               </p>
-              <div style={{ alignSelf: 'flex-start' }}>
-                <span className={styles.publishDate}>
-                  {data['article-info_1_date']}
-                </span>
+              <div className={styles.publishDate}>
+                <span>{data['article-info_1_date']}</span>
               </div>
 
               <Image
@@ -142,7 +173,6 @@ export default function Home(props) {
                     setSelectedCityIndex(e.currentTarget.value);
                   }}
                   aria-labelledby='city-selector'
-                  defaultValue={0}
                 >
                   {Array.from({ length: 32 }).map((_, index) => {
                     return (

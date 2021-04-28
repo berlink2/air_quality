@@ -65,6 +65,8 @@
 
 .publishDate {
   color: var(--gray);
+  align-self: flex-start;
+  margin-bottom: 1rem;
 }
 
 .heroImage {

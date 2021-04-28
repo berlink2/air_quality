@@ -4,7 +4,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head />
+        <Head>
+          <meta name='description' content='BBC News' />
+        </Head>
         <body>
           <Main />
           <NextScript />
