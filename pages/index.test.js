@@ -66,7 +66,6 @@ describe('tests for index page', () => {
     englishData['hero_1_image'] = '/img/uk-flag.png';
     hindiData['hero_1_image'] = '/img/uk-flag.png';
 
-    //   await waitFor(async () => {
     render(<Index englishData={englishData} hindiData={hindiData} />);
 
     // title should be english first
@@ -98,7 +97,6 @@ describe('tests for index page', () => {
     englishData['hero_1_image'] = '/img/uk-flag.png';
     hindiData['hero_1_image'] = '/img/uk-flag.png';
 
-    //   await waitFor(async () => {
     render(<Index englishData={englishData} hindiData={hindiData} />);
 
     // default selected city is correct
@@ -119,5 +117,22 @@ describe('tests for index page', () => {
     expect(screen.getByTestId('aqiCiggs').textContent).toEqual(
       'Equivalent to smoking 10 cigarettes'
     );
+  });
+
+  test('if page is accessible', async () => {
+    const { englishData, hindiData } = await getData();
+
+    // use dummy image as next/image testing does not work with online images at the moment
+    englishData['hero_1_image'] = '/img/uk-flag.png';
+    hindiData['hero_1_image'] = '/img/uk-flag.png';
+
+    waitFor(async () => {
+      const { container } = render(
+        <Index englishData={englishData} hindiData={hindiData} />
+      );
+
+      const results = await axe(container);
+      expect(results).toHaveNoViolations();
+    });
   });
 });
