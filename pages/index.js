@@ -3,9 +3,8 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { promises as fs } from 'fs';
 import path from 'path';
-import Image from 'next/image';
 
-// // This function gets called at build time on server-side.
+// This function gets called at build time on server-side.
 export async function getStaticProps() {
   const dataDirectory = path.join(process.cwd(), 'public/data');
   const filenames = await fs.readdir(dataDirectory);
@@ -110,12 +109,7 @@ export default function Home(props) {
               setLanguage('english');
             }}
           >
-            <Image
-              width={35}
-              height={35}
-              alt='UK Flag'
-              src='/img/uk-flag.png'
-            />
+            <img width={35} height={35} alt='UK Flag' src='/img/uk-flag.png' />
           </button>
 
           <div className={styles.spacerSmall} />
@@ -127,10 +121,10 @@ export default function Home(props) {
               setLanguage('hindi');
             }}
           >
-            <Image
+            <img
+              alt='India Flag'
               width={35}
               height={35}
-              alt='India Flag'
               src='/img/india-flag.png'
             />
           </button>
@@ -156,14 +150,17 @@ export default function Home(props) {
               <div className={styles.publishDate}>
                 <span>{data['article-info_1_date']}</span>
               </div>
-
-              <Image
-                src={data.hero_1_image}
-                height={675}
-                width={1261}
-                loading='eager'
-                alt='Two Indians on a motorcycle breathe in the Smog'
-              />
+              <div className={styles.heroImageWrapper}>
+                <img
+                  src={data.hero_1_image}
+                  style={{
+                    width: '100%',
+                    height: 'auto',
+                  }}
+                  loading='eager'
+                  alt='Two Indians on a motorcycle breathe in the Smog'
+                />
+              </div>
 
               <br />
               <p className={styles.p1}>{data.p_1_value}</p>
@@ -209,7 +206,7 @@ export default function Home(props) {
               <div className={styles.ciggs}>
                 {Array.from({ length: ciggNum }).map((_, index) => {
                   return (
-                    <Image
+                    <img
                       key={index}
                       alt='Ciggrette'
                       src='/img/ciggrette_icon.png'
