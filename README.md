@@ -1,6 +1,54 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Instructions to run the app
 
-## Getting Started
+Visit a deployed version of the app at https://air-quality.vercel.app/
+
+or 
+
+Run Locally
+
+1. Make sure you have Node and NPM installed on your local machine.
+2. CD to root directory of the app (where package.json is)
+3. Install dependencies with `npm install` or `yarn`
+4. Run app on a local dev server with `npm run dev`
+5. Alternatively make a production buid with `npm run build`
+6. Run the production build with `npm run start`
+7. With prod build or development build the app will be running at http://localhost:3000
+8. Run tests with `npm test`
+
+## Results
+
+Desktop Screenshot
+
+<img width="1425" alt="Screenshot 2021-04-28 at 19 23 11" src="https://user-images.githubusercontent.com/46464571/116402996-3f25e000-a857-11eb-883d-824895f117eb.png">
+
+Mobile Screenshot
+
+<img width="155" alt="Screenshot 2021-04-28 at 19 23 25" src="https://user-images.githubusercontent.com/46464571/116403138-68df0700-a857-11eb-8162-8aa72a98094e.png">
+
+
+
+Lighthouse Scores
+
+<img width="1438" alt="Screenshot 2021-04-28 at 19 12 08" src="https://user-images.githubusercontent.com/46464571/116402836-1271c880-a857-11eb-830e-d07b8966af20.png">
+
+Bundle sizes
+
+<img width="1439" alt="Screenshot 2021-04-28 at 19 21 23" src="https://user-images.githubusercontent.com/46464571/116402880-1e5d8a80-a857-11eb-853a-33046c462636.png">
+
+
+
+
+
+
+
+
+
+
+
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+ 
+## Generic instructions from Vercel
 
 First, run the development server:
 
